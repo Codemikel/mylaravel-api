@@ -16,4 +16,9 @@ class Post extends Model
     public function getPublishedAtAttribute() {
         return $this->created_at->diffForHumans();
     }
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+
 }
